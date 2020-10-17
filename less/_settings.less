@@ -1,0 +1,290 @@
+// MIXINUS - DELETE!!!!!
+//-------------------------------------------------
+.eclips										{white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.rel											{position:relative;}
+.abs											{position:absolute;}
+.hide											{overflow: hidden;} 
+.block											{display:block;}
+.fixed											{position: fixed;}
+.none											{display:none;}
+.col											{flex:1;}
+.col.c2											{flex:2;}
+// Box
+.box(@width:100%, @height:auto, @color:transparent, @padding: 5px, @margin:2px, @radius:0, )
+												{
+													width:@width; 
+													height:@height;
+													background:@color;
+													padding:@padding;
+													margin:@margin;
+													border-radius:@radius;
+													box-sizing:border-box;
+												}
+.box-size(@boxmodel:border-box)				{-webkit-box-sizing: @boxmodel;-moz-box-sizing: @boxmodel;box-sizing: @boxmodel;}
+.border-radius-custom (@topleft: 5px, @topright: 5px, @bottomleft: 5px, @bottomright: 5px) 
+												{
+													-webkit-border-radius: @topleft @topright @bottomright @bottomleft;
+													-moz-border-radius: @topleft @topright @bottomright @bottomleft;
+													border-radius: @topleft @topright @bottomright @bottomleft;
+							}
+.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: 0.2) 
+												{
+													-webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+													-moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+													box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+												}
+									
+.size(@width; @height) 							{width: @width;	height: @height;}
+.cube(@size) 									{.size(@size; @size);}
+.round(@size)									{.size(@size; @size); .radius(100%);display: block;line-height:@size; text-align: center;}						
+.radius (@radius: 5px)  						{ -webkit-border-radius: @radius; -moz-border-radius: @radius; border-radius: @radius;} 
+.border(@color:#000, @size:1px, @type:solid)   { border:@size @type @color;}
+
+// Text
+.text(@size:14px,@color:@textcolor,@weight:400, @height:@size )
+													{
+														font-size:@size;
+														font-weight:@weight;
+														color:@color;
+														line-height:@height;
+													}
+.f-size(@size:14px;)								{font-size:@size;}
+.f-form(@transform:uppercase)						{text-transform: @transform}
+.f-bold(@bold:600)									{ font-weight:@bold}
+
+
+
+
+// Flex
+.justify(@origin: space-between){
+								-webkit-justify-content: @origin; 
+								justify-content: @origin;
+} 
+.flex							{	
+								display: -webkit-flex;
+								display: -moz-flex;
+								display: -ms-flex;
+								display: -o-flex;
+								display: flex;
+}
+.wrap(@origin: wrap)			{
+								-webkit-flex-wrap:@origin;
+								-moz-flex-wrap: @origin; 
+								-ms-flex-wrap: @origin;
+								-o-flex-wrap:@origin;
+								flex-wrap: @origin;
+}
+.grow(@num:2)					{
+								-webkit-flex-grow: @num;
+								flex-grow: @num;
+}
+.align(@origin: center)			{
+									-ms-align-items: @origin;
+									align-items: @origin;
+}
+.width-f(@grow:1,@shrink:1,@basis:auto)
+								{
+								-webkit-flex: @grow @shrink @basis;
+								-moz-flex: @grow @shrink @basis;
+								-ms-flex: @grow @shrink @basis;
+								-o-flex: @grow @shrink @basis;
+								flex: @grow @shrink @basis;
+}	
+.flexdirection(@direction:row){
+								-webkit-flex-direction: @direction;
+								-moz-flex-direction: @direction;
+								-ms-flex-direction: @direction;
+								-o-flex-direction: @direction;
+								flex-direction: @direction;
+}
+.order (@order: 1)		    	{
+								-webkit-order: @order;
+								-moz-order: @order;
+								-ms-order: @order;
+								-o-order: @order;
+								order: @order;
+}
+
+// Design
+.gradient (@origin: left, @start: #ffffff, @stop: #000000) {
+								background-color: @start;
+								background-image: -webkit-linear-gradient(@origin, @start, @stop)!important;
+								background-image: -moz-linear-gradient(@origin, @start, @stop)!important;
+								background-image: -o-linear-gradient(@origin, @start, @stop)!important;
+								background-image: -ms-linear-gradient(@origin, @start, @stop)!important;
+								background-image: linear-gradient(@origin, @start, @stop)!important;
+							}
+.transition (@prop: all, @time: 0.2s, @ease: linear) {
+												-webkit-transition: @prop @time @ease;
+												-moz-transition: @prop @time @ease;
+												-o-transition: @prop @time @ease;
+												-ms-transition: @prop @time @ease;	
+												transition: @prop @time @ease;
+}	
+
+
+.form-control-focus(@color: @input-border-focus) {
+  @color-rgba: rgba(red(@color), green(@color), blue(@color), .6);
+  &:focus {
+    border-color: @color;
+    outline: 0;
+    .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px @{color-rgba}");
+  }
+}
+
+
+// Design-SETTINGS---------------------*/
+
+@font:'Roboto', sans-serif;
+@textcolor:#000 ;
+@bgcolor: #ccc;
+@placeholder:#ccc;
+
+///*----------------SETTINGS---------------------*/
+*, *:active, *:hover {outline:none!important; .box-size;}
+		
+/*-------------------FONTS-----------------------*/
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900&display=swap&subset=latin-ext";
+
+.wrapper{
+	max-width:1300px; margin:auto; display:flex; flex-wrap: wrap;justify-content: space-between;
+} 
+a{text-decoration: none;}
+a:hover{    text-decoration: underline;}
+a, p, span, button, input,a:hover, button:focus, input:focus {.transition;}
+a, p, span, li, h1, h2, h3, h4 {font-family:@font; }
+		
+input:focus,select:focus,textarea:focus { outline:1px solid #2f428e;}
+::-webkit-input-placeholder {font-size:13px;}
+::-moz-placeholder          {font-size:13px;}
+:-moz-placeholder           {font-size:13px;}
+:-ms-input-placeholder      {font-size:13px;}
+
+input:focus::-webkit-input-placeholder {color: #d4d4d4!important;}
+input:focus::-moz-placeholder          {color: #d4d4d4!important;}
+input:focus:-moz-placeholder           {color: #d4d4d4!important;}
+input:focus:-ms-input-placeholder      {color: #d4d4d4!important;}
+
+///*----------------INPUTS---------------------*/				
+
+input:-webkit-autofill, 
+textarea:-webkit-autofill, 
+select:-webkit-autofill {
+    background-color: #000!important;
+    background-image: none;
+    color: #fff!important;
+	-webkit-box-shadow: inset 0 0 0 50px #000 !important;
+    -webkit-text-fill-color: #fff !important;
+}
+
+.placeholder(@color: #777777) {
+  // Firefox
+  &::-moz-placeholder {
+    color: @color;
+    opacity: 1; 
+  }
+  &:-ms-input-placeholder { color: @color; } 
+  &::-webkit-input-placeholder  { color: @color; } 
+}	
+.customfile-wrap{.flex;}
+.customfile-container label:first-child {
+  width: 100px;
+  display: block;
+  margin-bottom: .5em;
+  font: bold 18px Arial, sans-serif;
+  color: #333;
+}
+.customfile-filename {
+  width: 230px;
+  padding: .4em .5em;
+}
+.customfile-filename:focus { 
+  outline: none;
+}
+	::-webkit-scrollbar-button { 
+				width:4px; 
+				height:0px 
+				} 
+				::-webkit-scrollbar-track { 
+				background-color:#d6d6d6; 
+				box-shadow:0px 0px 3px #000 inset; 
+				} 
+				::-webkit-scrollbar-thumb { 
+				-webkit-border-radius: 5px; 
+				border-radius: 5px; 
+				box-shadow:0px 1px 1px #fff inset; 
+				background:#464a56; 
+				} 
+				::-webkit-resizer{ 
+				background-image:url(''); 
+				background-repeat:no-repeat; 
+				width:5px; 
+				height:0px 
+				} 
+
+				::-webkit-scrollbar{ 			width: 6px;
+				}
+.file-upload{
+	.flex;   width:100%; .wrap;
+	.col{ flex:100%; padding-right:50px;  margin-bottom:5px;
+		h4{color:#4f5374; font-size:16px;  padding-bottom:10px; margin-bottom: 5px;}
+		&.video{  margin-left:30px; padding-left:40px; padding-top:30px;
+			.customfile-wrap{position:relative; margin-bottom:20px;
+				input{ opacity:0;}
+				button{max-width:250px; overflow: hidden; .abs; width:100%; height:100%; border:2px solid #e0e2e9; background:#f0f1f4; text-indent:1000%;z-index: 9;
+					&:before{  content:'Загрузить видео'; display:block;  width:100px; .abs;color:#7c7e8f; font-weight:bold;    white-space: nowrap;width: 200px;display: block; text-indent: 0; left:40px;}
+					&:after {z-index: 10; content:'';.box-size;  display:block; width:100px; .abs; left:-1px; top:-1px; .round(48px); border:3px solid #afb3c3; position:absolute;color:#7c7e8f; font-weight:bold;}
+					&:hover{background:#d4d7e0; }
+					}
+			}
+		} 
+	}
+}
+.customfile-container{
+	padding-bottom:8px; margin-top:8px; height:30px;
+	 width:100%;.flex; position:relative; .box-size;.justify;
+	input{margin:0;min-width:160px;width:100%;margin-left:-3px; .order(2); height: 30px; .box-size; .radius(5px)!important; border:1px solid #e0e6ef; z-index:1;    padding: 5px 10px;}
+	button{
+		padding:0 10px;height:30px;.order(1); .radius(5px);left:0; top:0; z-index:2;  background:#dee1ed;white-space: nowrap;color:#5e647e;font-size:12px;cursor: pointer; font-weight:bold; 
+		border-bottom-right-radius: 0px;border-top-right-radius: 0px;
+		&:hover{color:#fff;background-color: #626cdd;} 
+	}
+	span.btn {margin-left:15px;font-size: 18px;height: 30px;line-height: 30px; flex:0 0 30px; .box-size;}
+}				
+// Reset
+
+//------------------------------------
+html {	height: 100%;}
+body{padding:0;margin:0;font:13px/20px @font;}
+h1,h2,h3,h4,h5,h6,ul,li,em,strong,pre,code{padding:0;margin:0;font-size:100%;font-weight:normal;font-style: normal;}
+table{font-size:inherit;font:100%;/*border-collapse:collapse;border-spacing: 0;*/}
+ul{list-style:none;}
+* {	outline: none;}
+fieldset, img {border: 0;    margin: 0px;    padding: 0px;}
+p{margin: 0;}
+a:focus,a:active,a:hover {outline: none;}
+html,body,table {	height: 100%; width: 100%;}
+textarea {padding: 1px 0 1px 5px;}
+option {padding: 0 0 1px 5px;}
+input[type='hidden'] {display: none;}
+input[type='text'], input[type='password'] {}
+button, input[type='button'], input[type='submit'] {}
+input[type='button'], input[type='submit'], input[type='checkbox'], input[type='image'], input[type='radio'], input[type='reset'], select, button {cursor: pointer;}
+textarea, input[type='text'], input[type='password'], select {}
+textarea:hover, input[type='text']:hover, input[type='password']:hover, select:hover {}
+textarea:focus, input[type='text']:focus, input[type='password']:focus, select:focus {}
+@resetforms{  font: 100% arial,sans-serif;	vertical-align: middle;}
+.clear{&:after {display: block;clear: both;content: '';}}
+
+a:focus, a:active, a:hover,
+ p:focus, p:active, p:hover,
+li:focus, li:active, li:hover,
+span:focus, span:active, span:hover,
+input:focus, input:active, input:hover{
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+-webkit-tap-highlight-color: transparent;
+}
+
+.s4 .col{ flex:25%; }
+.s3 .col{ max-width:33%;     min-width: 250px;   padding:0 10px;}
+.kategory .col{max-width: 275px;}

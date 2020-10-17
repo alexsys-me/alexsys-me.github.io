@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Новостной ресур</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<link rel="stylesheet" href="fonts/flaticon.css" type="text/css" />
+	<!-- <link rel="stylesheet" href="css/materialize.css" type="text/css" /> -->	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://oss.maxcdn.com/libs/modernizr/2.6.2/modernizr.min.js"></script>
+</head>
+<body >
+
+<!-- Header-->	
+	<header>
+		<div class="wrapper">
+			<ul class="menu">
+				<li><a href="#">Главное</a></li> 
+				<li><a href="#">Интересное</a></li> 
+				<li><a href="#">Политика</a></li>
+				<li><a href="#">Общество</a></li> 
+				<li><a href="#">Экономика</a></li> 
+				<li><a href="#">Спорт</a></li>
+				<li><a href="#"> Происшествия</a></li> 
+				<li><a href="#"> Технологии </a></li> 
+				<li><a href="#"> Наука </a></li>
+				<li class="more "><a href="#" class="icon"> </a></li>
+			</ul>
+			<div class="setting">
+				<div class="timire"><a href="#" class="active">Час</a><a href="#" >Сутки</a></div>
+				<div class="filtr-content">
+					<a class='dropdown-trigger' href='#' data-target='dropdown1'>Источник</a>
+					<ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#">one</a></li>
+							<li><a href="#">two</a></li>
+							<li><a href="#">three</a></li>
+							<li><a href="#">four</a></li>
+							<li><a href="#">five</a></li>
+					</ul>
+				</div>
+				<a href="#" class="videolink">Видео</a>
+				<a href="#" class="account"></a>
+				<div class="search">
+					<div class="search-panel">
+						<form>
+							<input type="text" placeholder="Введите поисковый запрос">
+							<input type="submit">
+							<div class="s-close"></div>
+						</form>
+					</div>
+					<div class="icon search-ico"></div>
+				</div>
+
+			</div>
+		</div>
+	</header>
+<!-- BANNER -->	
+
+<div class="edit-menu">
+	<div class="wrapper">
+		<div class="link-edit">
+			<a href="#" class="icon articles">Все статьи</a>
+			<a href="#" class="icon archive">Архив статей</a>
+		</div>
+		<a href="#" class="addedit">Разместить статью</a>
+	</div>
+</div>
+
+<div class="wrapper">
+	<div class="center-col">
+		<div class="edit-content">
+			<div class="pre-edit">
+				<div class="row">
+					<div class="col">
+						<div class="edit-title"><div class="num">1</div><p>Описание<span>Добавте бысьтрое описание, которые будет выводиться в общем списке статей, но не будет выводиться в теле статьи</span></p></div>
+						<div class="description-text">
+							<textarea>Этот фильм никогда бы не появился на белый свет, если бы не упорство Лесли Дискон – внучки фотографа Доротеи Ланге и художника-пейзажиста Мейнарда Диксона. Хотя предки у неё и были знаменитостями, у девушки к 18 годам не было денег даже на то, чтобы поступить в колледж…</textarea>
+							<div class="num-des">145 и 350 символов</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="edit-title"><div class="num">2</div><p>Обложка<span>Добавте обложку вашей статьи (просто перетащитей файл)</span></p></div>
+						<div class="uploadimg"></div>
+					</div>
+					<div class="col">
+						<div class="edit-title"><div class="num">3</div><p>Категории для продвижения<span>Выберите категорию</span></p></div>
+						<select multiple>
+						  <option value="" disabled >Выберите категорию</option>
+						  <option value="1">Общество</option>
+						  <option value="2">Дом и семья</option>
+						  <option value="3">Экономика</option>
+						</select>
+						<div class="hash">Добавте #хэштеги, для более точного определиния темы вашей статьи</div>
+						<textarea>#общество #семья #дети #отношения #позитив #любовь</textarea>
+					</div>
+				</div>
+			</div>
+			
+			<!--Created Edit Block--->
+			<div class="clone-edit">
+				<div class="edit-title"><p>Статья<span>Вы можете компоноваться статью по своему усмотрению, выбирая необходимые элементы по клику на иконки плюс</span></p></div>
+				<div class="close"></div>
+				<div class="row">
+					<div class="col">
+						<img src="img/timy.jpg" />
+					</div>
+				</div>				
+			</div>
+			
+			<!--Action Edit--->
+			<div class="action-edit">
+				<ul>
+					<li><a href="#" class="icon text-icon"><span>Текст</span></a>
+						<ul>
+							<li><a href="#" class="icon text-icon">Просто текст</a></li>
+							<li><a href="#" class="icon qoute-icon">Цитата</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="icon photo-icon"><span>Фото</span></a>
+						<ul>
+							<li><a href="#" class="icon text-icon">Просто текст</a></li>
+							<li><a href="#" class="icon qoute-icon">Цитата</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="icon media-icon"><span>Медиа</span></a>
+						<ul>
+							<li><a href="#" class="icon text-icon">Видео</a></li>
+							<li><a href="#" class="icon qoute-icon">Галлерея</a></li>
+							<li><a href="#" class="icon qoute-icon">Слайдшоу</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<!--Action Edit--->
+			<div class="end-edit">
+				<a href="#" class="btn">Разместить статью</a>
+				<div>
+					<p>Выберите куда разместить статью можно сразу везде</p>
+					<div>
+						<label>
+							<input type="checkbox" class="filled-in" checked="checked" />
+							<span>На сайт</span>
+						</label>
+						<label>
+							<input type="checkbox" class="filled-in"  />
+							<span>В блог</span>
+						</label>
+						<label>
+							<input type="checkbox" class="filled-in"  />
+							<span>В СМИ</span>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>	
+
+
+	
+
+	<footer>
+		<div class="wrapper">
+			<div class="col">
+				<ul>					
+					<li><a href="#">Информация для СМИ</a></li>
+					<li><a href="#">База данных СМИ</a></li>
+					<li><a href="#">Пользовательское соглашение</a></li>
+					<li><a href="#">Мобильная версия</a></li>
+					<li><a href="#">Подписка на новости</a></li>
+					<li><a href="#">Новости на вашем сайте</a></li>
+					<li><a href="#">Реклама</a></li>
+					<li><a href="#">Статистика</a></li>
+				</ul>
+			</div>
+			<div class="col">
+				<p>Версия 2018.1 Beta<br/>
+				© 2019 МИА «Россия сегодня»<br/>
+				Сетевое издание РИА Новости зарегистрировано в Федеральной службе по <br/>
+				надзору в сфере связи, информационных технологий и массовых коммуникаций <br/>
+				(Роскомнадзор) 08 апреля 2014 года. <br/>
+				Свидетельство о регистрации Эл № ФС77-57640<br/>
+				Учредитель: Федеральное государственное унитарное предприятие <br/>
+				Международное информационное агентство «Россия сегодня»<br/>
+				(МИА «Россия сегодня»).
+				<strong>Правила использования материалов</strong></p>
+			</div>
+		</div>
+		<div class="copy"><div class="wrapper"><p>© 2019 МИА «Россия сегодня»</p></div></div>
+	</footer>
+	
+	
+<!-- Body END  -->	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	<script src="js/owl.carousel.min.js" type="text/javascript"></script> 
+	<script src="js/init.js"></script>
+</body>
+</html>
